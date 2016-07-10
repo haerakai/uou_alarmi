@@ -23,10 +23,10 @@ class UouSpider(scrapy.Spider):
 		links = []
 
 		for sel in response.xpath('//tbody/tr'):
-			dates.append(urllib.unquote(unicode(str(sel.xpath('td[1]/span/text()').extract())[3:-2], 'unicode-escape')))
-			names.append(urllib.unquote(unicode(str(sel.xpath('td[2]/span/a/@title').extract())[3:-2], 'unicode-escape')))
-			titles.append(urllib.unquote(unicode(str(sel.xpath('td[3]/span[1]/a/@title').extract())[3:-2], 'unicode-escape')))
-			links.append(urllib.unquote(unicode(str(sel.xpath('td[3]/span[1]/a/@href').extract())[3:-2], 'unicode-escape')))
+			dates.append(sel.xpath('td[1]/span/text()').extract()[0])
+			names.append(sel.xpath('td[2]/span/a/@title').extract()[0])
+			titles.append(sel.xpath('td[3]/span[1]/a/@title').extract()[0])
+			links.append(sel.xpath('td[3]/span[1]/a/@href').extract()[0])
 
 		if not os.path.exists(path_last):
 			last = '0'
@@ -37,15 +37,15 @@ class UouSpider(scrapy.Spider):
 		n = len(links)
 		with open(path_crawldb, 'w+') as f:
 			for i in range(0,n):
-				if int(last) >= int(str(links[i][-5:].encode('utf-8'))):
+				if int(last) >= int(str(links[i].encode('utf-8')[-5:])):
 					break
-				f.write(str(dates[i])+'\n')
+				f.write(dates[i].encode('utf-8')+'\n')
 				f.write(names[i].encode('utf-8')+'\n')
 				f.write(titles[i].encode('utf-8')+'\n')
-				f.write(str(links[i])+'\n')
+				f.write(links[i].encode('utf-8')+'\n')
 
 		with open(path_last, 'w+') as f:
-			last = links[0][-5:]
+			last = str(links[0].encode('utf-8')[-5:])
 			f.write(last.encode('utf-8'))
 
 		os.system('~/.virtualenvs/alarmi/bin/python ~/uou_alarmi_bot/broad.py')
