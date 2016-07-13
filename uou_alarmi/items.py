@@ -32,4 +32,5 @@ class UouAlarmiItemBarter(scrapy.Item):
 	title = scrapy.Field() #제목
 	name = scrapy.Field() #글쓴이
 	date = scrapy.Field() #날짜
+	link = scrapy.Field() #링크
 	pass

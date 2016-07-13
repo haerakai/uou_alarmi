@@ -50,5 +50,6 @@ class UouSpider(scrapy.Spider):
 			item['title'] = sel.xpath('td[2]/span[2]/a/@title').extract()[0]
 			item['name'] = sel.xpath('td[3]/span/text()').extract()[0]
 			item['date'] = sel.xpath('td[6]/span/text()').extract()[0]
+			item['link'] = sel.xpath('td[2]/span[2]/a/@href').extract()[0]
 			
 			yield item
