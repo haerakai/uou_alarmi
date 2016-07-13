@@ -9,8 +9,11 @@ import scrapy
 
 
 class UouAlarmiItem(scrapy.Item):
-	# name = scrapy.Field()
+	source = scrapy.Field()
+	category = scrapy.Field()
 	date = scrapy.Field()
 	name = scrapy.Field()
 	link = scrapy.Field()
 	title = scrapy.Field()
+	number = scrapy.Field()
+	pass

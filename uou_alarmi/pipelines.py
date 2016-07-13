@@ -5,7 +5,20 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
+import json
+import codecs
+import os
 
 class UouAlarmiPipeline(object):
-    def process_item(self, item, spider):
-        return item
+	def __init__(self):
+		home = os.path.expanduser("~")
+		path_spider = home + '/uou_alarmi/uou_alarmi/spiders/'
+		self.file = codecs.open(path_spider+'crawldb.json', 'w', encoding='utf-8')
+
+	def process_item(self, item, spider):
+		line = json.dumps(dict(item), ensure_ascii=False) + '\n'
+		self.file.write(line)
+		return item
+
+	def spider_closed(self, spider):
+		self.file.close()
