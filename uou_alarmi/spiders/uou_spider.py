@@ -29,7 +29,7 @@ class UouSpider(scrapy.Spider):
 
 	def parse_room(self, response):
 		item = UouAlarmiItemRoom()
-
+		
 		for sel in response.xpath('//tbody/tr'):
 			item['category'] = 'room'
 			item['num'] = sel.xpath('td[1]/span/text()').extract()[0]
@@ -52,3 +52,4 @@ class UouSpider(scrapy.Spider):
 			item['date'] = sel.xpath('td[6]/span/text()').extract()[0]
 			
 			yield item
+
