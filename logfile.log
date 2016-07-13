@@ -1484,6 +1484,7 @@
  'scheduler/enqueued/memory': 3,
  'start_time': datetime.datetime(2016, 7, 13, 18, 15, 14, 416875)}
 2016-07-13 11:15:15 [scrapy] INFO: Spider closed (finished)
+<<<<<<< HEAD
 2016-07-13 11:52:37 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
 2016-07-13 11:52:37 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
 2016-07-13 11:52:40 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
@@ -1493,6 +1494,15 @@
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.corestats.CoreStats']
 2016-07-13 11:52:40 [scrapy] INFO: Enabled downloader middlewares:
+=======
+2016-07-13 12:25:53 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-13 12:25:53 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-13 12:25:53 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-13 12:25:53 [scrapy] INFO: Enabled downloader middlewares:
+>>>>>>> feature/room
 ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -1505,12 +1515,17 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+<<<<<<< HEAD
 2016-07-13 11:52:40 [scrapy] INFO: Enabled spider middlewares:
+=======
+2016-07-13 12:25:53 [scrapy] INFO: Enabled spider middlewares:
+>>>>>>> feature/room
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+<<<<<<< HEAD
 2016-07-13 11:52:40 [scrapy] INFO: Enabled item pipelines:
 ['uou_alarmi.pipelines.UouAlarmiPipeline']
 2016-07-13 11:52:40 [scrapy] INFO: Spider opened
@@ -1862,12 +1877,292 @@
  'finish_time': datetime.datetime(2016, 7, 13, 18, 52, 41, 93004),
  'item_scraped_count': 50,
  'log_count/DEBUG': 55,
+=======
+2016-07-13 12:25:53 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-13 12:25:53 [scrapy] INFO: Spider opened
+2016-07-13 12:25:54 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-13 12:25:54 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-13 12:25:54 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-13 12:25:54 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-13 12:25:54 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-13 12:25:54 [scrapy] ERROR: Spider error processing <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+Traceback (most recent call last):
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/parktaeyoul/uou_alarmi/uou_alarmi/spiders/uou_spider.py", line 53, in parse_barter
+    item['link'] = sel.xpath('td[3]/span[2]/a/@href').extract()[0]
+IndexError: list index out of range
+2016-07-13 12:25:54 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'100/25\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20604',
+ 'location': u'\uacfc\ud559\ub300\ud559\ud6c4\ubb38\uc55e \ubb38\uc218\ud130\ubcf5\uc0ac\uc9d12\uce35 203\ud638',
+ 'num': u'10262',
+ 'title': u'\uc6d0\ub8f8\uc784\ub300'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'100/25',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20603',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ub300\uc6b4\ub3d9\uc7a5 \ucabd\ubb38 \ubd80\uadfc',
+ 'num': u'10261',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38 \uae68\ub057\ud55c \uc6d0\ub8f8'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08 500\ub9cc\uc6d0 \uc6d4\uc138 30\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20602',
+ 'location': u'\uc120\uacbd\ub9c8\ud2b8 \uc704\ucabd ',
+ 'num': u'10260',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38 \ub3c4\ubcf4 6~7\ubd84\uac70\ub9ac  \ub9c8\ub2f9\uc788\ub294 \uc9d1 \ud22c\ub8f8'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'36~40',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20601',
+ 'location': u'\uc2e0\ubcf5\ub85c\ud0c0\ub9ac 5\ubd84 \uac70\ub9ac, \uc6b8\uc0b0\ub300 \ubc84\uc2a4 2~3\uc815\uac70\uc7a5',
+ 'num': u'10259',
+ 'title': u'\uc6b8\uc0b0 \uc751\ub2f5\ud558\ub77c \ud558\uc219, \uace0\uc2dc\ud154'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'35',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20600',
+ 'location': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38',
+ 'num': u'10258',
+ 'title': u'\uc36c\ub354\uce58\ud0a8 \uac74\ubb3c \uc6d0\ub8f8\ud154 \ubc29\ud31d\ub2c8\ub2e4!'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'35',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20599',
+ 'location': u'\uc6b8\uacfc\ub300 \ud6c4\ubb38',
+ 'num': u'10257',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38  12\ub9d0\uae4c\uc9c0 \uacc4\uc57d\ub41c\uc6d0\ub8f8 \uacc4\uc57d\uc591\ub3c4'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08 500\ub9cc\uc6d0 \uc6d4\uc138 30\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20598',
+ 'location': u'\uc120\uacbd\ub9c8\ud2b8 \uc704\ucabd ',
+ 'num': u'10256',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38 \ub3c4\ubcf4 6~7\ubd84\uac70\ub9ac  \ub9c8\ub2f9\uc788\ub294 \uc9d1 \ud22c\ub8f8'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300-32',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20597',
+ 'location': u'\ub9e5\ub3c4\ub0a0\ub4dc\ubd80\uadfc \ud55c\uc2e0 \ud734 \uc815\ubb38\uc55e',
+ 'num': u'10255',
+ 'title': u'\uc6b8\ub300\uc55e \ub9e5\ub3c4\ub0a0\ub4dc \ubd80\uadfc \uc62c \ub9ac\ubaa8\ub378\ub9c1\ud55c \uc6d0\ub8f8'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/38(\uc804\uae30\ub8cc\ub9cc \ubd80\uacfc) ',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20596',
+ 'location': u'\uc6b8\uacfc\ub300\uc815\ubb382\ubd84\uac70\ub9ac, \ub9c8\uc774\ub9c8\uc774\uce58\ud0a8 \uace8\ubaa9',
+ 'num': u'10254',
+ 'title': u'\ucd5c\uc2e0\uc635\uc158 \uc2e0\ucd95 \ub9ac\ube59\ud154 (\uc0ac\uc9c4\u6709)'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'1000/30 \uc870\uc815\uac00\ub2a5',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20595',
+ 'location': u'\ub9e5\ub3c4\ub0a0\ub4dc \ubd80\uadfc',
+ 'num': u'10253',
+ 'title': u'\uc6d0\ub8f8\uc788\uc2b5\ub2c8\ub2e4(\ubc14\ubcf4\uc0ac\uac70\ub9ac 5\ubd84\uac70\ub9ac)'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'20~25\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20594',
+ 'location': u'\uc6b8\uc0b0\ub300 \uc815\ubb38 \uc544\uc0b0\uc2a4\ud3ec\uce20\uc13c\ud130 \ub9de\uc740\ud3b8 SUBWAY\uc606',
+ 'num': u'10252',
+ 'title': u'\ub3d9\uc778\uace0\uc2dc\ud154'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08100 \uc6d4\uc13830',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20593',
+ 'location': u'\uc21c\uacf1\uc774\ub124 \uac74\ubb3c 4\uce35 (\uc6b8\uc0b0\ub300 \uc815\ubb38 5\ubd84\uac70\ub9ac)',
+ 'num': u'10251',
+ 'title': u'\uc6d0\ub8f8\ud615 \uace0\uc2dc\ud154 \ubcf4\ub7ec\uc624\uc138\uc694'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200/32( \uad00\ub9ac\ube44 \ud3ec\ud568)',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20592',
+ 'location': u'\ubc30\ud130\uc9c0\ub294 \ub3c8\uae4c\uc2a4\uc640 \uc0c8\ubb38\uc218\uace0\uc2dc\ud154 \uc911\uac04\uc9c0\uc810',
+ 'num': u'10250',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc6d0\ub8f8 '}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/30, 500/25',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20591',
+ 'location': u'\uc6b8\uc0b0\ub300 \uc815\ubb38 \ub3c4\ubcf4 10\ubd84',
+ 'num': u'10249',
+ 'title': u'\uae54\ub054\ud558\uace0 \uc88b\uc740 \ubc29, \ub0b4\ub144 2\uc6d4 17\uc77c\uae4c\uc9c0 \uacc4\uc57d\uc778 \ubc29\uc785\ub2c8\ub2e4!'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200/30',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20590',
+ 'location': u'\uc6b8\uacfc\ub300\uc11c\ubd80\ucea0\uc815\ubb38 \ub9de\uc740\ud3b8\ub18d\ud611\ub4b7\uace8\ubaa9 (\uc5d0\uc774\ud50c\ub7ec\uc2a4\uace0\uc2dc\ud154\uc778\uadfc)',
+ 'num': u'10248',
+ 'title': u'\ud480\uc635\uc158/\ub274 \ub9ac\ubaa8\ub378\ub9c1/\uad00\ub9ac\ube44\uc5c6\uc74c!!!'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29985',
+ 'name': u'\uc911\ubd80\ub3c4\uc11c\uad00',
+ 'title': u'\ub3c4\uc11c\uad00 \uc790\ub8cc\uc815\ub9ac \ubc0f \uc5c5\ubb34\ubcf4\uc870'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29984',
+ 'name': u'\uc885\ub85c\ud559\uc6d0\ud558\ub298\uad50\uc721 \ub0a8\ubaa9\ud559\uc6d0',
+ 'title': u'\uacfc\ud559\uac15\uc0ac\ub97c \ubaa8\uc9d1\ud569\ub2c8\ub2e4'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29983',
+ 'name': u'\ubcf4\uc2a4\ud1a4 T&J ',
+ 'title': u'\ucd08\ub4f1\ubd80 \uc218\ud559 \ubc0f  \uad6d\uc0ac\uacfc \ubcf4\uc870\uad50\uc0ac \uad6c\ud569\ub2c8\ub2e4.'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29982',
+ 'name': u'\uc624\ub80c\uc9c0\ud53c\uc2dc\ubc29',
+ 'title': u'\ub2e8\uc21c\ud55c \uc790\ub8cc\uc5c5\ubb34'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29981',
+ 'name': u'\ubbf8\uc18c\ud55c\ucc2c\uc785\uc2dc\ud559\uc6d0',
+ 'title': u'\uc911\ub4f1\ubd80 \uc601\uc5b4 \uac15\uc0ac\uad6c\ud568'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29980',
+ 'name': u'\uc218\ud559 \uc804\ubb38 \ud559\uc6d0',
+ 'title': u'\ucd08\ub4f1\ubd80 \uc218\ud559\uad50\uc0ac\uad6c\ud569\ub2c8\ub2e4'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29979',
+ 'name': u'\ube14\ub7ed\ub178\ub9ac',
+ 'title': u'\ube14\ub7ed\ubc29 \uc544\uc774\ub4e4 \ub3cc\ubcf4\uae30'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29978',
+ 'name': u'\uc8fc)\ubcc4\ubc29',
+ 'title': u'\u25a0 20\uc138\uc774\uc0c1 \uc544\ub974\ubc14\uc774\ud2b8 \ubaa8\uc9d1 \u25a0'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29977',
+ 'name': u'T&S1319 \uc785\uc2dc\ud559\uc6d0',
+ 'title': u'\uad6d\uc5b4 \uac15\uc758'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29976',
+ 'name': u'\ud55c\uad6d\ud654\ud559\uc5f0\uad6c\uc6d0',
+ 'title': u'\uc5f0\uad6c'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29975',
+ 'name': u'\uc77c\ub4f1\ud559\uc6d0',
+ 'title': u'\ucd08\ub4f1\ubd80 \uad6d\uc0ac\uacfc'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29974',
+ 'name': u'\uc8fc)\uc2e0\ud654',
+ 'title': u'\uc790\ub8cc\uc785\ub825'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29973',
+ 'name': u'\uc77c\ub4f1\ud559\uc6d0',
+ 'title': u'\ub2e8\uc5b4\uc640 \ub3c5\ud574'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29972',
+ 'name': u'\ub4dc\ub9bc\uc778',
+ 'title': u'\uc790\ub8cc\uc785\ub825\uc544\ub974\ubc14\uc774\ud2b8'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29971',
+ 'name': u'\uc544\ud30c\ud2b8',
+ 'title': u'\uc7a5\uc560\uc778 \ud55c \ub2ec \ub450 \ubc88 \ubaa9\uc695\uc2dc\ucf1c \uc8fc\uc2e4 \ubd84'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29970',
+ 'name': u'\uc8fc)\uc640\uc774\uc988 \uad50\uc721',
+ 'title': u'\ub3c5\uc11c\ub17c\uc220 \uc9c0\ub3c4'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29969',
+ 'name': u'515\ud1b5\ubb38\uc5b4\uc219\ud68c & \uc721\ud68c (\ubcd1\uc601)',
+ 'title': u'\ubcd1\uc601)  515\ud1b5\ubb38\uc5b4\uc219\ud68c \ubc0f \uc721\ud68c \uc8fc\ubc29\uc9c1\uc6d0 \ubc0f \ud640\uc11c\ube59 \ud30c\ud2b8\ud0c0\uc774\uba38 \ucc44\uc6a9\uad00\ub828'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29968',
+ 'name': u'-',
+ 'title': u'\uc9c4\uc815\ud55c \uafc0\uc54c\ubc14 \uac04\ub2e8\ud55c \ube14\ub85c\uadf8 \uc6b4\uc601'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29967',
+ 'name': u'KDS',
+ 'title': u'\uc54c\ubc143\uba85 (\uae09\uc5ec\ub192\uc74c)'}
+2016-07-13 12:25:54 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29966',
+ 'name': u'\uc6b8\uc8fc\uad70\uccad',
+ 'title': u'\ud589\uc815 \ubcf4\uc870 \ubc0f \uad70\uc815\uc5c5\ubb34\uccb4\ud5d8 \ub4f1'}
+2016-07-13 12:25:54 [scrapy] INFO: Closing spider (finished)
+2016-07-13 12:25:54 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30311,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 13, 19, 25, 54, 564383),
+ 'item_scraped_count': 35,
+ 'log_count/DEBUG': 40,
+ 'log_count/ERROR': 1,
+>>>>>>> feature/room
  'log_count/INFO': 7,
  'response_received_count': 4,
  'scheduler/dequeued': 3,
  'scheduler/dequeued/memory': 3,
  'scheduler/enqueued': 3,
  'scheduler/enqueued/memory': 3,
+<<<<<<< HEAD
  'start_time': datetime.datetime(2016, 7, 13, 18, 52, 40, 527913)}
 2016-07-13 11:52:41 [scrapy] INFO: Spider closed (finished)
 2016-07-13 11:54:00 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
@@ -1877,6 +2172,18 @@
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.corestats.CoreStats']
 2016-07-13 11:54:00 [scrapy] INFO: Enabled downloader middlewares:
+=======
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2016, 7, 13, 19, 25, 54, 898)}
+2016-07-13 12:25:54 [scrapy] INFO: Spider closed (finished)
+2016-07-13 12:27:16 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-13 12:27:16 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-13 12:27:16 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-13 12:27:16 [scrapy] INFO: Enabled downloader middlewares:
+>>>>>>> feature/room
 ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -1889,12 +2196,17 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+<<<<<<< HEAD
 2016-07-13 11:54:00 [scrapy] INFO: Enabled spider middlewares:
+=======
+2016-07-13 12:27:16 [scrapy] INFO: Enabled spider middlewares:
+>>>>>>> feature/room
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+<<<<<<< HEAD
 2016-07-13 11:54:00 [scrapy] INFO: Enabled item pipelines:
 ['uou_alarmi.pipelines.UouAlarmiPipeline']
 2016-07-13 11:54:00 [scrapy] INFO: Spider opened
@@ -2246,12 +2558,292 @@
  'finish_time': datetime.datetime(2016, 7, 13, 18, 54, 1, 778399),
  'item_scraped_count': 50,
  'log_count/DEBUG': 55,
+=======
+2016-07-13 12:27:16 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-13 12:27:16 [scrapy] INFO: Spider opened
+2016-07-13 12:27:16 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-13 12:27:16 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-13 12:27:16 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-13 12:27:16 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-13 12:27:16 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-13 12:27:16 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-13 12:27:17 [scrapy] ERROR: Spider error processing <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+Traceback (most recent call last):
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/parktaeyoul/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/parktaeyoul/uou_alarmi/uou_alarmi/spiders/uou_spider.py", line 53, in parse_barter
+    item['link'] = sel.xpath('td[3]/span[2]/a/@href').extract()[0]
+IndexError: list index out of range
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'100/25\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20604',
+ 'location': u'\uacfc\ud559\ub300\ud559\ud6c4\ubb38\uc55e \ubb38\uc218\ud130\ubcf5\uc0ac\uc9d12\uce35 203\ud638',
+ 'num': u'10262',
+ 'title': u'\uc6d0\ub8f8\uc784\ub300'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'100/25',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20603',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ub300\uc6b4\ub3d9\uc7a5 \ucabd\ubb38 \ubd80\uadfc',
+ 'num': u'10261',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38 \uae68\ub057\ud55c \uc6d0\ub8f8'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08 500\ub9cc\uc6d0 \uc6d4\uc138 30\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20602',
+ 'location': u'\uc120\uacbd\ub9c8\ud2b8 \uc704\ucabd ',
+ 'num': u'10260',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38 \ub3c4\ubcf4 6~7\ubd84\uac70\ub9ac  \ub9c8\ub2f9\uc788\ub294 \uc9d1 \ud22c\ub8f8'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'36~40',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20601',
+ 'location': u'\uc2e0\ubcf5\ub85c\ud0c0\ub9ac 5\ubd84 \uac70\ub9ac, \uc6b8\uc0b0\ub300 \ubc84\uc2a4 2~3\uc815\uac70\uc7a5',
+ 'num': u'10259',
+ 'title': u'\uc6b8\uc0b0 \uc751\ub2f5\ud558\ub77c \ud558\uc219, \uace0\uc2dc\ud154'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'35',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20600',
+ 'location': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38',
+ 'num': u'10258',
+ 'title': u'\uc36c\ub354\uce58\ud0a8 \uac74\ubb3c \uc6d0\ub8f8\ud154 \ubc29\ud31d\ub2c8\ub2e4!'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'35',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20599',
+ 'location': u'\uc6b8\uacfc\ub300 \ud6c4\ubb38',
+ 'num': u'10257',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38  12\ub9d0\uae4c\uc9c0 \uacc4\uc57d\ub41c\uc6d0\ub8f8 \uacc4\uc57d\uc591\ub3c4'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08 500\ub9cc\uc6d0 \uc6d4\uc138 30\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20598',
+ 'location': u'\uc120\uacbd\ub9c8\ud2b8 \uc704\ucabd ',
+ 'num': u'10256',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38 \ub3c4\ubcf4 6~7\ubd84\uac70\ub9ac  \ub9c8\ub2f9\uc788\ub294 \uc9d1 \ud22c\ub8f8'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300-32',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20597',
+ 'location': u'\ub9e5\ub3c4\ub0a0\ub4dc\ubd80\uadfc \ud55c\uc2e0 \ud734 \uc815\ubb38\uc55e',
+ 'num': u'10255',
+ 'title': u'\uc6b8\ub300\uc55e \ub9e5\ub3c4\ub0a0\ub4dc \ubd80\uadfc \uc62c \ub9ac\ubaa8\ub378\ub9c1\ud55c \uc6d0\ub8f8'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/38(\uc804\uae30\ub8cc\ub9cc \ubd80\uacfc) ',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20596',
+ 'location': u'\uc6b8\uacfc\ub300\uc815\ubb382\ubd84\uac70\ub9ac, \ub9c8\uc774\ub9c8\uc774\uce58\ud0a8 \uace8\ubaa9',
+ 'num': u'10254',
+ 'title': u'\ucd5c\uc2e0\uc635\uc158 \uc2e0\ucd95 \ub9ac\ube59\ud154 (\uc0ac\uc9c4\u6709)'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'1000/30 \uc870\uc815\uac00\ub2a5',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20595',
+ 'location': u'\ub9e5\ub3c4\ub0a0\ub4dc \ubd80\uadfc',
+ 'num': u'10253',
+ 'title': u'\uc6d0\ub8f8\uc788\uc2b5\ub2c8\ub2e4(\ubc14\ubcf4\uc0ac\uac70\ub9ac 5\ubd84\uac70\ub9ac)'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'20~25\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20594',
+ 'location': u'\uc6b8\uc0b0\ub300 \uc815\ubb38 \uc544\uc0b0\uc2a4\ud3ec\uce20\uc13c\ud130 \ub9de\uc740\ud3b8 SUBWAY\uc606',
+ 'num': u'10252',
+ 'title': u'\ub3d9\uc778\uace0\uc2dc\ud154'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08100 \uc6d4\uc13830',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20593',
+ 'location': u'\uc21c\uacf1\uc774\ub124 \uac74\ubb3c 4\uce35 (\uc6b8\uc0b0\ub300 \uc815\ubb38 5\ubd84\uac70\ub9ac)',
+ 'num': u'10251',
+ 'title': u'\uc6d0\ub8f8\ud615 \uace0\uc2dc\ud154 \ubcf4\ub7ec\uc624\uc138\uc694'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200/32( \uad00\ub9ac\ube44 \ud3ec\ud568)',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20592',
+ 'location': u'\ubc30\ud130\uc9c0\ub294 \ub3c8\uae4c\uc2a4\uc640 \uc0c8\ubb38\uc218\uace0\uc2dc\ud154 \uc911\uac04\uc9c0\uc810',
+ 'num': u'10250',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc6d0\ub8f8 '}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/30, 500/25',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20591',
+ 'location': u'\uc6b8\uc0b0\ub300 \uc815\ubb38 \ub3c4\ubcf4 10\ubd84',
+ 'num': u'10249',
+ 'title': u'\uae54\ub054\ud558\uace0 \uc88b\uc740 \ubc29, \ub0b4\ub144 2\uc6d4 17\uc77c\uae4c\uc9c0 \uacc4\uc57d\uc778 \ubc29\uc785\ub2c8\ub2e4!'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200/30',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20590',
+ 'location': u'\uc6b8\uacfc\ub300\uc11c\ubd80\ucea0\uc815\ubb38 \ub9de\uc740\ud3b8\ub18d\ud611\ub4b7\uace8\ubaa9 (\uc5d0\uc774\ud50c\ub7ec\uc2a4\uace0\uc2dc\ud154\uc778\uadfc)',
+ 'num': u'10248',
+ 'title': u'\ud480\uc635\uc158/\ub274 \ub9ac\ubaa8\ub378\ub9c1/\uad00\ub9ac\ube44\uc5c6\uc74c!!!'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29985',
+ 'name': u'\uc911\ubd80\ub3c4\uc11c\uad00',
+ 'title': u'\ub3c4\uc11c\uad00 \uc790\ub8cc\uc815\ub9ac \ubc0f \uc5c5\ubb34\ubcf4\uc870'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29984',
+ 'name': u'\uc885\ub85c\ud559\uc6d0\ud558\ub298\uad50\uc721 \ub0a8\ubaa9\ud559\uc6d0',
+ 'title': u'\uacfc\ud559\uac15\uc0ac\ub97c \ubaa8\uc9d1\ud569\ub2c8\ub2e4'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29983',
+ 'name': u'\ubcf4\uc2a4\ud1a4 T&J ',
+ 'title': u'\ucd08\ub4f1\ubd80 \uc218\ud559 \ubc0f  \uad6d\uc0ac\uacfc \ubcf4\uc870\uad50\uc0ac \uad6c\ud569\ub2c8\ub2e4.'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29982',
+ 'name': u'\uc624\ub80c\uc9c0\ud53c\uc2dc\ubc29',
+ 'title': u'\ub2e8\uc21c\ud55c \uc790\ub8cc\uc5c5\ubb34'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29981',
+ 'name': u'\ubbf8\uc18c\ud55c\ucc2c\uc785\uc2dc\ud559\uc6d0',
+ 'title': u'\uc911\ub4f1\ubd80 \uc601\uc5b4 \uac15\uc0ac\uad6c\ud568'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29980',
+ 'name': u'\uc218\ud559 \uc804\ubb38 \ud559\uc6d0',
+ 'title': u'\ucd08\ub4f1\ubd80 \uc218\ud559\uad50\uc0ac\uad6c\ud569\ub2c8\ub2e4'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29979',
+ 'name': u'\ube14\ub7ed\ub178\ub9ac',
+ 'title': u'\ube14\ub7ed\ubc29 \uc544\uc774\ub4e4 \ub3cc\ubcf4\uae30'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29978',
+ 'name': u'\uc8fc)\ubcc4\ubc29',
+ 'title': u'\u25a0 20\uc138\uc774\uc0c1 \uc544\ub974\ubc14\uc774\ud2b8 \ubaa8\uc9d1 \u25a0'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29977',
+ 'name': u'T&S1319 \uc785\uc2dc\ud559\uc6d0',
+ 'title': u'\uad6d\uc5b4 \uac15\uc758'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29976',
+ 'name': u'\ud55c\uad6d\ud654\ud559\uc5f0\uad6c\uc6d0',
+ 'title': u'\uc5f0\uad6c'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29975',
+ 'name': u'\uc77c\ub4f1\ud559\uc6d0',
+ 'title': u'\ucd08\ub4f1\ubd80 \uad6d\uc0ac\uacfc'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29974',
+ 'name': u'\uc8fc)\uc2e0\ud654',
+ 'title': u'\uc790\ub8cc\uc785\ub825'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29973',
+ 'name': u'\uc77c\ub4f1\ud559\uc6d0',
+ 'title': u'\ub2e8\uc5b4\uc640 \ub3c5\ud574'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29972',
+ 'name': u'\ub4dc\ub9bc\uc778',
+ 'title': u'\uc790\ub8cc\uc785\ub825\uc544\ub974\ubc14\uc774\ud2b8'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29971',
+ 'name': u'\uc544\ud30c\ud2b8',
+ 'title': u'\uc7a5\uc560\uc778 \ud55c \ub2ec \ub450 \ubc88 \ubaa9\uc695\uc2dc\ucf1c \uc8fc\uc2e4 \ubd84'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29970',
+ 'name': u'\uc8fc)\uc640\uc774\uc988 \uad50\uc721',
+ 'title': u'\ub3c5\uc11c\ub17c\uc220 \uc9c0\ub3c4'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29969',
+ 'name': u'515\ud1b5\ubb38\uc5b4\uc219\ud68c & \uc721\ud68c (\ubcd1\uc601)',
+ 'title': u'\ubcd1\uc601)  515\ud1b5\ubb38\uc5b4\uc219\ud68c \ubc0f \uc721\ud68c \uc8fc\ubc29\uc9c1\uc6d0 \ubc0f \ud640\uc11c\ube59 \ud30c\ud2b8\ud0c0\uc774\uba38 \ucc44\uc6a9\uad00\ub828'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29968',
+ 'name': u'-',
+ 'title': u'\uc9c4\uc815\ud55c \uafc0\uc54c\ubc14 \uac04\ub2e8\ud55c \ube14\ub85c\uadf8 \uc6b4\uc601'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29967',
+ 'name': u'KDS',
+ 'title': u'\uc54c\ubc143\uba85 (\uae09\uc5ec\ub192\uc74c)'}
+2016-07-13 12:27:17 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29966',
+ 'name': u'\uc6b8\uc8fc\uad70\uccad',
+ 'title': u'\ud589\uc815 \ubcf4\uc870 \ubc0f \uad70\uc815\uc5c5\ubb34\uccb4\ud5d8 \ub4f1'}
+2016-07-13 12:27:17 [scrapy] INFO: Closing spider (finished)
+2016-07-13 12:27:17 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30311,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 13, 19, 27, 17, 112485),
+ 'item_scraped_count': 35,
+ 'log_count/DEBUG': 40,
+ 'log_count/ERROR': 1,
+>>>>>>> feature/room
  'log_count/INFO': 7,
  'response_received_count': 4,
  'scheduler/dequeued': 3,
  'scheduler/dequeued/memory': 3,
  'scheduler/enqueued': 3,
  'scheduler/enqueued/memory': 3,
+<<<<<<< HEAD
  'start_time': datetime.datetime(2016, 7, 13, 18, 54, 0, 777947)}
 2016-07-13 11:54:01 [scrapy] INFO: Spider closed (finished)
 2016-07-13 11:57:15 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
@@ -2261,6 +2853,18 @@
  'scrapy.extensions.telnet.TelnetConsole',
  'scrapy.extensions.corestats.CoreStats']
 2016-07-13 11:57:15 [scrapy] INFO: Enabled downloader middlewares:
+=======
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2016, 7, 13, 19, 27, 16, 568924)}
+2016-07-13 12:27:17 [scrapy] INFO: Spider closed (finished)
+2016-07-13 12:27:47 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-13 12:27:47 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-13 12:27:47 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-13 12:27:47 [scrapy] INFO: Enabled downloader middlewares:
+>>>>>>> feature/room
 ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -2273,12 +2877,17 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+<<<<<<< HEAD
 2016-07-13 11:57:15 [scrapy] INFO: Enabled spider middlewares:
+=======
+2016-07-13 12:27:47 [scrapy] INFO: Enabled spider middlewares:
+>>>>>>> feature/room
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+<<<<<<< HEAD
 2016-07-13 11:57:15 [scrapy] INFO: Enabled item pipelines:
 ['uou_alarmi.pipelines.UouAlarmiPipeline']
 2016-07-13 11:57:15 [scrapy] INFO: Spider opened
@@ -2628,6 +3237,372 @@
  'downloader/response_status_count/200': 4,
  'finish_reason': 'finished',
  'finish_time': datetime.datetime(2016, 7, 13, 18, 57, 15, 757183),
+=======
+2016-07-13 12:27:47 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-13 12:27:47 [scrapy] INFO: Spider opened
+2016-07-13 12:27:47 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-13 12:27:47 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-13 12:27:47 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-13 12:27:48 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-13 12:27:48 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-13 12:27:48 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.16',
+ 'link': u'barter.aspx?o=R&a_no=28553',
+ 'name': u'\ubc15\ucc2c',
+ 'num': u'8022',
+ 'title': u'\uac24\ub7ed\uc2dcs5(LTE-A U+) 32GB \ud654\uc774\ud2b8 \ud31d\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.16',
+ 'link': u'barter.aspx?o=R&a_no=28552',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8021',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.16',
+ 'link': u'barter.aspx?o=R&a_no=28551',
+ 'name': u'\uae40\ud604\uc6a9',
+ 'num': u'8020',
+ 'title': u'\ud574\ucee4\uc2a4 \ud1a0\uc775 \ucc45 \ud31d\ub2c8\ub2e4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.15',
+ 'link': u'barter.aspx?o=R&a_no=28550',
+ 'name': u'\uae40\uad11\ud604',
+ 'num': u'8019',
+ 'title': u'\uc288\ud37c\uc2f1\uae00 \ub9e4\ud2b8\ub9ac\uc2a4 \uc0bd\ub2c8\ub2e4!'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.15',
+ 'link': u'barter.aspx?o=R&a_no=28549',
+ 'name': u'\uae40\uc7ac\ud658',
+ 'num': u'8018',
+ 'title': u'Adobe Acrobat XI Pro \ud559\uc0dd \uad50\uc218\uc6a9'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.15',
+ 'link': u'barter.aspx?o=R&a_no=28548',
+ 'name': u'\uac15\uc2e0\uc6a9',
+ 'num': u'8017',
+ 'title': u'\uc77c\ubc18\uae30\uacc4\uae30\uc0ac \uc2e4\uae30 \uc0bd\ub2c8\ub2e4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28547',
+ 'name': u'\uad8c\uad00\uc6b0',
+ 'num': u'8016',
+ 'title': u'\ud574\ucee4\uc2a4 \uc624\ud53d\ucc45 \ud314\uc544\uc694.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28546',
+ 'name': u'\uc1a1\uc740\uc9c0',
+ 'num': u'8015',
+ 'title': u'\uc0b0\uc5c5\uc548\uc804\uc0b0\uc5c5\uae30\uc0ac\ucc45 \ud31d\ub2c8\ub2e4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28545',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8014',
+ 'title': u'\uacf5 Cd \ud31d\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28544',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8013',
+ 'title': u'MP3 \ud31d\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28543',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8012',
+ 'title': u'AA AAA \uac74\uc804\uc9c0 \ud31d\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28542',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8011',
+ 'title': u'Cool Skin \uc637 \ud31d\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28541',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8010',
+ 'title': u'\ucc45\uc0c1 \uc2a4\ud0e0\ub4dc \ud31d\ub2c8\ub2e4...(\uc61b\ub0a0\uaebc)'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28540',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8009',
+ 'title': u'\ubbf8\uad6d\uc0b0 \ud0c0\uc774\ud0c0\ub2c9 \uc815\ud488 DVD \ud314\uc544\uc694.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.14',
+ 'link': u'barter.aspx?o=R&a_no=28539',
+ 'name': u'\uc870\uc815\uc6b1',
+ 'num': u'8008',
+ 'title': u'B4, A3 \ubcf5\uc0ac\uc6a9\uc9c0 \ud31d\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'100/25\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20604',
+ 'location': u'\uacfc\ud559\ub300\ud559\ud6c4\ubb38\uc55e \ubb38\uc218\ud130\ubcf5\uc0ac\uc9d12\uce35 203\ud638',
+ 'num': u'10262',
+ 'title': u'\uc6d0\ub8f8\uc784\ub300'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'100/25',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20603',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ub300\uc6b4\ub3d9\uc7a5 \ucabd\ubb38 \ubd80\uadfc',
+ 'num': u'10261',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38 \uae68\ub057\ud55c \uc6d0\ub8f8'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08 500\ub9cc\uc6d0 \uc6d4\uc138 30\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20602',
+ 'location': u'\uc120\uacbd\ub9c8\ud2b8 \uc704\ucabd ',
+ 'num': u'10260',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38 \ub3c4\ubcf4 6~7\ubd84\uac70\ub9ac  \ub9c8\ub2f9\uc788\ub294 \uc9d1 \ud22c\ub8f8'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'36~40',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20601',
+ 'location': u'\uc2e0\ubcf5\ub85c\ud0c0\ub9ac 5\ubd84 \uac70\ub9ac, \uc6b8\uc0b0\ub300 \ubc84\uc2a4 2~3\uc815\uac70\uc7a5',
+ 'num': u'10259',
+ 'title': u'\uc6b8\uc0b0 \uc751\ub2f5\ud558\ub77c \ud558\uc219, \uace0\uc2dc\ud154'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'35',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20600',
+ 'location': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38',
+ 'num': u'10258',
+ 'title': u'\uc36c\ub354\uce58\ud0a8 \uac74\ubb3c \uc6d0\ub8f8\ud154 \ubc29\ud31d\ub2c8\ub2e4!'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'35',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20599',
+ 'location': u'\uc6b8\uacfc\ub300 \ud6c4\ubb38',
+ 'num': u'10257',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38  12\ub9d0\uae4c\uc9c0 \uacc4\uc57d\ub41c\uc6d0\ub8f8 \uacc4\uc57d\uc591\ub3c4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08 500\ub9cc\uc6d0 \uc6d4\uc138 30\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20598',
+ 'location': u'\uc120\uacbd\ub9c8\ud2b8 \uc704\ucabd ',
+ 'num': u'10256',
+ 'title': u'\uc6b8\uacfc\ub300\ud6c4\ubb38 \ub3c4\ubcf4 6~7\ubd84\uac70\ub9ac  \ub9c8\ub2f9\uc788\ub294 \uc9d1 \ud22c\ub8f8'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300-32',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20597',
+ 'location': u'\ub9e5\ub3c4\ub0a0\ub4dc\ubd80\uadfc \ud55c\uc2e0 \ud734 \uc815\ubb38\uc55e',
+ 'num': u'10255',
+ 'title': u'\uc6b8\ub300\uc55e \ub9e5\ub3c4\ub0a0\ub4dc \ubd80\uadfc \uc62c \ub9ac\ubaa8\ub378\ub9c1\ud55c \uc6d0\ub8f8'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/38(\uc804\uae30\ub8cc\ub9cc \ubd80\uacfc) ',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20596',
+ 'location': u'\uc6b8\uacfc\ub300\uc815\ubb382\ubd84\uac70\ub9ac, \ub9c8\uc774\ub9c8\uc774\uce58\ud0a8 \uace8\ubaa9',
+ 'num': u'10254',
+ 'title': u'\ucd5c\uc2e0\uc635\uc158 \uc2e0\ucd95 \ub9ac\ube59\ud154 (\uc0ac\uc9c4\u6709)'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'1000/30 \uc870\uc815\uac00\ub2a5',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20595',
+ 'location': u'\ub9e5\ub3c4\ub0a0\ub4dc \ubd80\uadfc',
+ 'num': u'10253',
+ 'title': u'\uc6d0\ub8f8\uc788\uc2b5\ub2c8\ub2e4(\ubc14\ubcf4\uc0ac\uac70\ub9ac 5\ubd84\uac70\ub9ac)'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'20~25\ub9cc\uc6d0',
+ 'date': u'2016.07.16',
+ 'link': u'room.aspx?o=R&a_no=20594',
+ 'location': u'\uc6b8\uc0b0\ub300 \uc815\ubb38 \uc544\uc0b0\uc2a4\ud3ec\uce20\uc13c\ud130 \ub9de\uc740\ud3b8 SUBWAY\uc606',
+ 'num': u'10252',
+ 'title': u'\ub3d9\uc778\uace0\uc2dc\ud154'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\ubcf4\uc99d\uae08100 \uc6d4\uc13830',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20593',
+ 'location': u'\uc21c\uacf1\uc774\ub124 \uac74\ubb3c 4\uce35 (\uc6b8\uc0b0\ub300 \uc815\ubb38 5\ubd84\uac70\ub9ac)',
+ 'num': u'10251',
+ 'title': u'\uc6d0\ub8f8\ud615 \uace0\uc2dc\ud154 \ubcf4\ub7ec\uc624\uc138\uc694'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200/32( \uad00\ub9ac\ube44 \ud3ec\ud568)',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20592',
+ 'location': u'\ubc30\ud130\uc9c0\ub294 \ub3c8\uae4c\uc2a4\uc640 \uc0c8\ubb38\uc218\uace0\uc2dc\ud154 \uc911\uac04\uc9c0\uc810',
+ 'num': u'10250',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc6d0\ub8f8 '}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/30, 500/25',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20591',
+ 'location': u'\uc6b8\uc0b0\ub300 \uc815\ubb38 \ub3c4\ubcf4 10\ubd84',
+ 'num': u'10249',
+ 'title': u'\uae54\ub054\ud558\uace0 \uc88b\uc740 \ubc29, \ub0b4\ub144 2\uc6d4 17\uc77c\uae4c\uc9c0 \uacc4\uc57d\uc778 \ubc29\uc785\ub2c8\ub2e4!'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200/30',
+ 'date': u'2016.07.15',
+ 'link': u'room.aspx?o=R&a_no=20590',
+ 'location': u'\uc6b8\uacfc\ub300\uc11c\ubd80\ucea0\uc815\ubb38 \ub9de\uc740\ud3b8\ub18d\ud611\ub4b7\uace8\ubaa9 (\uc5d0\uc774\ud50c\ub7ec\uc2a4\uace0\uc2dc\ud154\uc778\uadfc)',
+ 'num': u'10248',
+ 'title': u'\ud480\uc635\uc158/\ub274 \ub9ac\ubaa8\ub378\ub9c1/\uad00\ub9ac\ube44\uc5c6\uc74c!!!'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29985',
+ 'name': u'\uc911\ubd80\ub3c4\uc11c\uad00',
+ 'title': u'\ub3c4\uc11c\uad00 \uc790\ub8cc\uc815\ub9ac \ubc0f \uc5c5\ubb34\ubcf4\uc870'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29984',
+ 'name': u'\uc885\ub85c\ud559\uc6d0\ud558\ub298\uad50\uc721 \ub0a8\ubaa9\ud559\uc6d0',
+ 'title': u'\uacfc\ud559\uac15\uc0ac\ub97c \ubaa8\uc9d1\ud569\ub2c8\ub2e4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29983',
+ 'name': u'\ubcf4\uc2a4\ud1a4 T&J ',
+ 'title': u'\ucd08\ub4f1\ubd80 \uc218\ud559 \ubc0f  \uad6d\uc0ac\uacfc \ubcf4\uc870\uad50\uc0ac \uad6c\ud569\ub2c8\ub2e4.'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.16',
+ 'link': u'arbeit.aspx?o=R&a_no=29982',
+ 'name': u'\uc624\ub80c\uc9c0\ud53c\uc2dc\ubc29',
+ 'title': u'\ub2e8\uc21c\ud55c \uc790\ub8cc\uc5c5\ubb34'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29981',
+ 'name': u'\ubbf8\uc18c\ud55c\ucc2c\uc785\uc2dc\ud559\uc6d0',
+ 'title': u'\uc911\ub4f1\ubd80 \uc601\uc5b4 \uac15\uc0ac\uad6c\ud568'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29980',
+ 'name': u'\uc218\ud559 \uc804\ubb38 \ud559\uc6d0',
+ 'title': u'\ucd08\ub4f1\ubd80 \uc218\ud559\uad50\uc0ac\uad6c\ud569\ub2c8\ub2e4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29979',
+ 'name': u'\ube14\ub7ed\ub178\ub9ac',
+ 'title': u'\ube14\ub7ed\ubc29 \uc544\uc774\ub4e4 \ub3cc\ubcf4\uae30'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29978',
+ 'name': u'\uc8fc)\ubcc4\ubc29',
+ 'title': u'\u25a0 20\uc138\uc774\uc0c1 \uc544\ub974\ubc14\uc774\ud2b8 \ubaa8\uc9d1 \u25a0'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29977',
+ 'name': u'T&S1319 \uc785\uc2dc\ud559\uc6d0',
+ 'title': u'\uad6d\uc5b4 \uac15\uc758'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29976',
+ 'name': u'\ud55c\uad6d\ud654\ud559\uc5f0\uad6c\uc6d0',
+ 'title': u'\uc5f0\uad6c'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29975',
+ 'name': u'\uc77c\ub4f1\ud559\uc6d0',
+ 'title': u'\ucd08\ub4f1\ubd80 \uad6d\uc0ac\uacfc'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29974',
+ 'name': u'\uc8fc)\uc2e0\ud654',
+ 'title': u'\uc790\ub8cc\uc785\ub825'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29973',
+ 'name': u'\uc77c\ub4f1\ud559\uc6d0',
+ 'title': u'\ub2e8\uc5b4\uc640 \ub3c5\ud574'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29972',
+ 'name': u'\ub4dc\ub9bc\uc778',
+ 'title': u'\uc790\ub8cc\uc785\ub825\uc544\ub974\ubc14\uc774\ud2b8'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29971',
+ 'name': u'\uc544\ud30c\ud2b8',
+ 'title': u'\uc7a5\uc560\uc778 \ud55c \ub2ec \ub450 \ubc88 \ubaa9\uc695\uc2dc\ucf1c \uc8fc\uc2e4 \ubd84'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29970',
+ 'name': u'\uc8fc)\uc640\uc774\uc988 \uad50\uc721',
+ 'title': u'\ub3c5\uc11c\ub17c\uc220 \uc9c0\ub3c4'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.15',
+ 'link': u'arbeit.aspx?o=R&a_no=29969',
+ 'name': u'515\ud1b5\ubb38\uc5b4\uc219\ud68c & \uc721\ud68c (\ubcd1\uc601)',
+ 'title': u'\ubcd1\uc601)  515\ud1b5\ubb38\uc5b4\uc219\ud68c \ubc0f \uc721\ud68c \uc8fc\ubc29\uc9c1\uc6d0 \ubc0f \ud640\uc11c\ube59 \ud30c\ud2b8\ud0c0\uc774\uba38 \ucc44\uc6a9\uad00\ub828'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29968',
+ 'name': u'-',
+ 'title': u'\uc9c4\uc815\ud55c \uafc0\uc54c\ubc14 \uac04\ub2e8\ud55c \ube14\ub85c\uadf8 \uc6b4\uc601'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29967',
+ 'name': u'KDS',
+ 'title': u'\uc54c\ubc143\uba85 (\uae09\uc5ec\ub192\uc74c)'}
+2016-07-13 12:27:48 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.14',
+ 'link': u'arbeit.aspx?o=R&a_no=29966',
+ 'name': u'\uc6b8\uc8fc\uad70\uccad',
+ 'title': u'\ud589\uc815 \ubcf4\uc870 \ubc0f \uad70\uc815\uc5c5\ubb34\uccb4\ud5d8 \ub4f1'}
+2016-07-13 12:27:48 [scrapy] INFO: Closing spider (finished)
+2016-07-13 12:27:48 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30311,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 13, 19, 27, 48, 375000),
+>>>>>>> feature/room
  'item_scraped_count': 50,
  'log_count/DEBUG': 55,
  'log_count/INFO': 7,
@@ -2636,5 +3611,10 @@
  'scheduler/dequeued/memory': 3,
  'scheduler/enqueued': 3,
  'scheduler/enqueued/memory': 3,
+<<<<<<< HEAD
  'start_time': datetime.datetime(2016, 7, 13, 18, 57, 15, 242324)}
 2016-07-13 11:57:15 [scrapy] INFO: Spider closed (finished)
+=======
+ 'start_time': datetime.datetime(2016, 7, 13, 19, 27, 47, 853503)}
+2016-07-13 12:27:48 [scrapy] INFO: Spider closed (finished)
+>>>>>>> feature/room
