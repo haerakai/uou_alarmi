@@ -6,30 +6,48 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 from __future__ import unicode_literals
-import json
-import codecs
+import MySQLdb.cursors
 
 class UouAlarmiPipeline(object):
 	def __init__(self):
-		self.arbeit_file = codecs.open('arbeit.json', 'w', encoding='utf-8')    	
-		self.room_file = codecs.open('room.json', 'w', encoding='utf-8')
-		self.barter_file = codecs.open('barter.json', 'w', encoding='utf-8')
+		try:
+			self.conn = MySQLdb.connect(user='molkoo', passwd='7qmffor', db='uou_alarmi', host='localhost', charset='utf8', use_unicode='True')
+			self.cursor = self.conn.cursor()
+			self.cursor.execute("delete uou_alarmi_barter, uou_alarmi_arbeit, uou_alarmi_room from uou_alarmi_barter, uou_alarmi_arbeit, uou_alarmi_room")
+			self.conn.commit()
+
+		except MySQLdb.Error, e:
+			print "Error %d: %s" % (e.args[0], e.args[1])
+			sys.exit(1)
 
 	def process_item(self, item, spider):
-        	line = json.dumps(dict(item), ensure_ascii=False)+"\n"
 		category = item['category']
-		
+
 		if category=='arbeit':
-			self.arbeit_file.write(line)
+			try:
+				self.cursor.execute("insert into uou_alarmi.uou_alarmi_arbeit(category, date, name, link, title, num) values(%s, %s, %s, %s, %s, %s)", (item['category'].encode('utf-8'), item['date'].encode('utf-8'), item['name'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/info/arbeit/"+item['link'].encode('utf-8'), item['title'].encode('utf-8'), item['link'].encode('utf-8')[-5:]))
+		
+			except MySQLdb.Error, e:
+				print "Error %d: %s" % (e.args[0], e.args[1])
+				sys.exit(1)
 
 		elif category=='room':
-			self.room_file.write(line)
+			try:
+				self.cursor.execute("insert into uou_alarmi.uou_alarmi_room(category, num, title, cost, link, location, date) values(%s, %s, %s, %s, %s, %s, %s)", (item['category'].encode('utf-8'), item['num'].encode('utf-8'), item['title'].encode('utf-8'), item['cost'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/info/arbeit/"+item['link'].encode('utf-8'), item['location'].encode('utf-8'), item['date'].encode('utf-8')))
 
+			except MySQLdb.Error, e:
+				print "Error %d: %s" % (e.args[0], e.args[1])
+				sys.exit(1)
 		else:
-			self.barter_file.write(line)
+			try:
+				self.cursor.execute("insert into uou_alarmi.uou_alarmi_barter(category, date, name, num, title, link) values(%s, %s, %s, %s, %s, %s)", (item['category'].encode('utf-8'), item['date'].encode('utf-8'), item['name'].encode('utf-8'), item['num'].encode('utf-8'), item['title'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/info/arbeit/"+item['link'].encode('utf-8')))
+
+			except MySQLdb.Error, e:
+				print "Error %d: %s" % (e.args[0], e.args[1])
+				sys.exit(1)
+
+		self.conn.commit()
 		return item
 
 	def spider_closed(self, spider):
-		self.barter_file.close()
-		self.room_file.close()
-		self.arbeit_file.close()
+		self.conn.close()
