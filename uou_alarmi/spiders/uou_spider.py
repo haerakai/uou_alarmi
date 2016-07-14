@@ -24,7 +24,7 @@ class UouSpider(scrapy.Spider):
 			item['name'] = sel.xpath('td[2]/span/a/@title').extract()[0]
 			item['title'] = sel.xpath('td[3]/span[1]/a/@title').extract()[0]
 			item['link'] = sel.xpath('td[3]/span[1]/a/@href').extract()[0]
-			
+			item['num'] = sel.xpath('td[3]/span[1]/a/@href').extract()[0][-5:]	
 			yield item	
 
 	def parse_room(self, response):

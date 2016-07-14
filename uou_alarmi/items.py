@@ -14,6 +14,7 @@ class UouAlarmiItemArbeit(scrapy.Item):
 	name = scrapy.Field() #이름
 	link = scrapy.Field() #링크
 	title = scrapy.Field() #제목
+	num = scrapy.Field() #글번호
 	pass
 	
 class UouAlarmiItemRoom(scrapy.Item):
