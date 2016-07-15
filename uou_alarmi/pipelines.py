@@ -31,7 +31,7 @@ class UouAlarmiPipeline(object):
 		
 		if category=='arbeit': #모두 저장
 			try:	
-				self.cursor.execute("insert into uou_alarmi.uou_alarmi_arbeit(date, name, link, title, num) values(%s, %s, %s, %s, %s)", (item['date'].encode('utf-8'), item['name'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/info/arbeit/"+item['link'].encode('utf-8'), item['title'].encode('utf-8'), item['num'].encode('utf-8')))
+				self.cursor.execute("insert into uou_alarmi.uou_alarmi_arbeit(date, name, link, title, num) values(%s, %s, %s, %s, %s)", (item['date'].encode('utf-8'), item['name'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/m/"+item['link'].encode('utf-8'), item['title'].encode('utf-8'), item['num'].encode('utf-8')))
 		
 			except MySQLdb.Error, e:
 				print "Error %d: %s" % (e.args[0], e.args[1])
@@ -39,14 +39,14 @@ class UouAlarmiPipeline(object):
 
 		elif category=='room': #모두 저장
 			try:
-				self.cursor.execute("insert into uou_alarmi.uou_alarmi_room(num, title, cost, link, location, date) values(%s, %s, %s, %s, %s, %s)", (item['num'].encode('utf-8'), item['title'].encode('utf-8'), item['cost'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/info/room/"+item['link'].encode('utf-8'), item['location'].encode('utf-8'), item['date'].encode('utf-8')))
+				self.cursor.execute("insert into uou_alarmi.uou_alarmi_room(num, title, cost, link, location, date) values(%s, %s, %s, %s, %s, %s)", (item['num'].encode('utf-8'), item['title'].encode('utf-8'), item['cost'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/m/"+item['link'].encode('utf-8'), item['location'].encode('utf-8'), item['date'].encode('utf-8')))
 
 			except MySQLdb.Error, e:
 				print "Error %d: %s" % (e.args[0], e.args[1])
 				sys.exit(1)
 		else: #모두 저장
 			try:
-				self.cursor.execute("insert into uou_alarmi.uou_alarmi_barter(date, name, num, title, link) values(%s, %s, %s, %s, %s)", (item['date'].encode('utf-8'), item['name'].encode('utf-8'), item['num'].encode('utf-8'), item['title'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/info/barter/"+item['link'].encode('utf-8')))
+				self.cursor.execute("insert into uou_alarmi.uou_alarmi_barter(date, name, num, title, link) values(%s, %s, %s, %s, %s)", (item['date'].encode('utf-8'), item['name'].encode('utf-8'), item['num'].encode('utf-8'), item['title'].encode('utf-8'), "http://www.ulsan.ac.kr/utopia/m/"+item['link'].encode('utf-8')))
 
 			except MySQLdb.Error, e:
 				print "Error %d: %s" % (e.args[0], e.args[1])
