@@ -6,18 +6,19 @@ import urllib
 import os
 import MySQLdb.cursors
 
-from uou_alarmi.items import UouAlarmiItemArbeit, UouAlarmiItemRoom, UouAlarmiItemBarter
+from uou_alarmi.items import UouAlarmiItemArbeit, UouAlarmiItemRoom, UouAlarmiItemBarter,UouAlarmiItemCicweb
 
 class UouSpider(scrapy.Spider):
 	name = "uou_spider"
 
 	def start_requests(self):
 		try:
-			self.conn = MySQLdb.connect(user='user', passwd='passwd', db='uou_alarmi', host='localhost', charset='utf8', use_unicode='True')
+			self.conn = MySQLdb.connect(user='alarmi', passwd='alarmi', db='uou_alarmi', host='localhost', charset='utf8', use_unicode='True')
 			self.cursor = self.conn.cursor()
 
-			self.cursor.execute('select arbeit, room, barter from uou_alarmi_last')
+			self.cursor.execute('select arbeit, room, barter, cicweb from uou_alarmi_last')
 			self.result = self.cursor.fetchone()
+		
 		except MySQL.Error, e:
 			print "Error %d: %s" % (e.args[0], e.args[1])
 			sys.exit(1)
@@ -25,7 +26,8 @@ class UouSpider(scrapy.Spider):
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L", self.parse_arbeit)
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L", self.parse_room)
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L", self.parse_barter)
-
+		yield scrapy.Request("http://home2.ulsan.ac.kr/user/indexSub.action?codyMenuSeq=7896&siteId=11112222", self.parse_cicweb)
+	
 	def parse_arbeit(self, response):
 		item = UouAlarmiItemArbeit()
 		flag = 0
@@ -77,5 +79,26 @@ class UouSpider(scrapy.Spider):
 				
 			yield item
 		self.cursor.execute('update uou_alarmi_last set barter = %s' % response.xpath('//tbody/tr[1]/td[1]/span/text()').extract()[0])
+		self.conn.commit()
+
+	def parse_cicweb(self, response):
+		item = UouAlarmiItemCicweb()
+		num = 1	
+		for sel in response.xpath('//tbody/tr'):
+			if  sel.xpath('td[1]/img').extract():
+				num += 1
+				continue
+			
+			item['category'] = 'cicweb'
+			item['num'] = sel.xpath('td[1]/text()').extract()[0]
+			item['title'] = sel.xpath('td[2]/a/text()').extract()[0]
+			item['name'] = sel.xpath('td[3]/text()').extract()[0].strip()
+			item['date'] = sel.xpath('td[4]/text()').extract()[0].strip()
+			item['link'] = sel.xpath('td[2]/a/@href').extract()[0]		
+			if self.result[3] >= int(item['num']):
+				break
+
+			yield item
+		self.cursor.execute('update uou_alarmi_last set cicweb = %s' % response.xpath('//tbody/tr['+str(num)+']/td[1]/text()').extract()[0])
 		self.conn.commit()
 

@@ -35,3 +35,12 @@ class UouAlarmiItemBarter(scrapy.Item):
 	date = scrapy.Field() #날짜
 	link = scrapy.Field() #링크
 	pass
+
+class UouAlarmiItemCicweb(scrapy.Item):
+	category = scrapy.Field()
+	num = scrapy.Field()
+	title = scrapy.Field()
+	name = scrapy.Field()
+	date = scrapy.Field()
+	link = scrapy.Field()
+	pass
