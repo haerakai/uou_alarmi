@@ -4,6 +4,7 @@ __author__ = 'haerakai & molkoo'
 import scrapy
 import urllib
 import os
+import MySQLdb.cursors
 
 from uou_alarmi.items import UouAlarmiItemArbeit, UouAlarmiItemRoom, UouAlarmiItemBarter
 
@@ -11,6 +12,16 @@ class UouSpider(scrapy.Spider):
 	name = "uou_spider"
 
 	def start_requests(self):
+		try:
+			self.conn = MySQLdb.connect(user='alarmi', passwd='alarmi', db='uou_alarmi', host='localhost', charset='utf8', use_unicode='True')
+			self.cursor = self.conn.cursor()
+
+			self.cursor.execute('select arbeit, room, barter from uou_alarmi_last')
+			self.result = self.cursor.fetchone()
+		except MySQL.Error, e:
+			print "Error %d: %s" % (e.args[0], e.args[1])
+			sys.exit(1)
+			
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L", self.parse_arbeit)
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L", self.parse_room)
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L", self.parse_barter)
@@ -25,6 +36,9 @@ class UouSpider(scrapy.Spider):
 			item['title'] = sel.xpath('td[3]/span[1]/a/@title').extract()[0]
 			item['link'] = sel.xpath('td[3]/span[1]/a/@href').extract()[0]
 			item['num'] = sel.xpath('td[3]/span[1]/a/@href').extract()[0][-5:]	
+			if self.result[0] >= int(item['num']):
+				break
+
 			yield item	
 
 	def parse_room(self, response):
@@ -38,6 +52,8 @@ class UouSpider(scrapy.Spider):
 			item['cost'] = sel.xpath('td[4]/span/text()').extract()[0]
 			item['date'] = sel.xpath('td[5]/span/text()').extract()[0]
 			item['link'] = sel.xpath('td[3]/span[1]/a/@href').extract()[0]
+			if self.result[1] >= int(item['num']):
+				break
 			
 			yield item
 
@@ -51,6 +67,8 @@ class UouSpider(scrapy.Spider):
 			item['name'] = sel.xpath('td[3]/span/text()').extract()[0]
 			item['date'] = sel.xpath('td[6]/span/text()').extract()[0]
 			item['link'] = sel.xpath('td[2]/span[2]/a/@href').extract()[0]
-			
+			if self.result[2] >= int(item['num']):
+				break
+				
 			yield item
 
