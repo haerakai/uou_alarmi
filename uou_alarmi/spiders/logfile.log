@@ -1430,3 +1430,1365 @@ SystemExit: 1
  'scheduler/enqueued/memory': 3,
  'start_time': datetime.datetime(2016, 7, 18, 14, 15, 44, 142630)}
 2016-07-18 23:15:44 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:26:23 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:26:23 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:26:23 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:26:23 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:26:23 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:26:23 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:26:23 [scrapy] INFO: Spider opened
+2016-07-19 00:26:23 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:26:23 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:26:23 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:26:24 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:26:24 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:26:24 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28561',
+ 'name': u'\ub178\uc720\uc9c4',
+ 'num': u'8022',
+ 'title': u'\uc778\uc2a4\ud0c1\uc2a47s + \ud544\ub98410\uc7a5 (\uc0c8\uc0c1\ud488) 4\ub9cc5\ucc9c\uc6d0\uc5d0 \ud310\ub9e4\ud569\ub2c8\ub2e4 '}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/35',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20636',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38\uc5d0\uc11c 7\ubd84, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac5\ubd84',
+ 'num': u'10290',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac \uc778\uadfc \uc6d0\ub8f8 \uae09\ud558\uac8c \ub0b4\ub193\uc2b5\ub2c8\ub2e4 \u3160\u3160'}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200\ub9cc\uc6d0 22',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20635',
+ 'location': u'\ud6c4\ubb38 \uacbd\ube44\uc2e4\uc55e',
+ 'num': u'10289',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc785\uad6c \uc6d0\ub8f8'}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'500/43',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20634',
+ 'location': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38',
+ 'num': u'10288',
+ 'title': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38 5\ubd84\uac70\ub9ac \uc6d0\ub8f8 \ub4e4\uc5b4\uc624\uc2e4\ubd84 \u3160\u3160 \uae09\ud558\uac8c \uad6c\ud574\uc694'}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:26:24 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29998',
+ 'name': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8',
+ 'num': u'29998',
+ 'title': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8\ud64d\ubcf4'}
+2016-07-19 00:26:24 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:26:24 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30529,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 26, 24, 443264),
+ 'item_scraped_count': 8,
+ 'log_count/DEBUG': 13,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 26, 23, 948991)}
+2016-07-19 00:26:24 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:29:44 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:29:44 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:29:44 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:29:44 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:29:44 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:29:44 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:29:44 [scrapy] INFO: Spider opened
+2016-07-19 00:29:44 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:29:44 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:29:44 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:29:44 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:29:44 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:29:44 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28561',
+ 'name': u'\ub178\uc720\uc9c4',
+ 'num': u'8022',
+ 'title': u'\uc778\uc2a4\ud0c1\uc2a47s + \ud544\ub98410\uc7a5 (\uc0c8\uc0c1\ud488) 4\ub9cc5\ucc9c\uc6d0\uc5d0 \ud310\ub9e4\ud569\ub2c8\ub2e4 '}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/35',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20636',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38\uc5d0\uc11c 7\ubd84, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac5\ubd84',
+ 'num': u'10290',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac \uc778\uadfc \uc6d0\ub8f8 \uae09\ud558\uac8c \ub0b4\ub193\uc2b5\ub2c8\ub2e4 \u3160\u3160'}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200\ub9cc\uc6d0 22',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20635',
+ 'location': u'\ud6c4\ubb38 \uacbd\ube44\uc2e4\uc55e',
+ 'num': u'10289',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc785\uad6c \uc6d0\ub8f8'}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'500/43',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20634',
+ 'location': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38',
+ 'num': u'10288',
+ 'title': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38 5\ubd84\uac70\ub9ac \uc6d0\ub8f8 \ub4e4\uc5b4\uc624\uc2e4\ubd84 \u3160\u3160 \uae09\ud558\uac8c \uad6c\ud574\uc694'}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:29:45 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29998',
+ 'name': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8',
+ 'num': u'29998',
+ 'title': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8\ud64d\ubcf4'}
+2016-07-19 00:29:45 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:29:45 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30526,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 29, 45, 66007),
+ 'item_scraped_count': 8,
+ 'log_count/DEBUG': 13,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 29, 44, 525112)}
+2016-07-19 00:29:45 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:30:14 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:30:14 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:30:14 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:30:14 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:30:14 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:30:14 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:30:14 [scrapy] INFO: Spider opened
+2016-07-19 00:30:14 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:30:14 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:30:14 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:30:14 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:30:14 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:30:14 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28561',
+ 'name': u'\ub178\uc720\uc9c4',
+ 'num': u'8022',
+ 'title': u'\uc778\uc2a4\ud0c1\uc2a47s + \ud544\ub98410\uc7a5 (\uc0c8\uc0c1\ud488) 4\ub9cc5\ucc9c\uc6d0\uc5d0 \ud310\ub9e4\ud569\ub2c8\ub2e4 '}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/35',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20636',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38\uc5d0\uc11c 7\ubd84, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac5\ubd84',
+ 'num': u'10290',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac \uc778\uadfc \uc6d0\ub8f8 \uae09\ud558\uac8c \ub0b4\ub193\uc2b5\ub2c8\ub2e4 \u3160\u3160'}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200\ub9cc\uc6d0 22',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20635',
+ 'location': u'\ud6c4\ubb38 \uacbd\ube44\uc2e4\uc55e',
+ 'num': u'10289',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc785\uad6c \uc6d0\ub8f8'}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'500/43',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20634',
+ 'location': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38',
+ 'num': u'10288',
+ 'title': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38 5\ubd84\uac70\ub9ac \uc6d0\ub8f8 \ub4e4\uc5b4\uc624\uc2e4\ubd84 \u3160\u3160 \uae09\ud558\uac8c \uad6c\ud574\uc694'}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:30:14 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29998',
+ 'name': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8',
+ 'num': u'29998',
+ 'title': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8\ud64d\ubcf4'}
+2016-07-19 00:30:14 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:30:14 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30526,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 30, 14, 980233),
+ 'item_scraped_count': 8,
+ 'log_count/DEBUG': 13,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 30, 14, 444944)}
+2016-07-19 00:30:14 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:31:30 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:31:30 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:31:30 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:31:30 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:31:30 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:31:30 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:31:30 [scrapy] INFO: Spider opened
+2016-07-19 00:31:30 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:31:30 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:31:30 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:31:30 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:31:30 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:31:30 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28561',
+ 'name': u'\ub178\uc720\uc9c4',
+ 'num': u'8022',
+ 'title': u'\uc778\uc2a4\ud0c1\uc2a47s + \ud544\ub98410\uc7a5 (\uc0c8\uc0c1\ud488) 4\ub9cc5\ucc9c\uc6d0\uc5d0 \ud310\ub9e4\ud569\ub2c8\ub2e4 '}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/35',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20636',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38\uc5d0\uc11c 7\ubd84, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac5\ubd84',
+ 'num': u'10290',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac \uc778\uadfc \uc6d0\ub8f8 \uae09\ud558\uac8c \ub0b4\ub193\uc2b5\ub2c8\ub2e4 \u3160\u3160'}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200\ub9cc\uc6d0 22',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20635',
+ 'location': u'\ud6c4\ubb38 \uacbd\ube44\uc2e4\uc55e',
+ 'num': u'10289',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc785\uad6c \uc6d0\ub8f8'}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'500/43',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20634',
+ 'location': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38',
+ 'num': u'10288',
+ 'title': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38 5\ubd84\uac70\ub9ac \uc6d0\ub8f8 \ub4e4\uc5b4\uc624\uc2e4\ubd84 \u3160\u3160 \uae09\ud558\uac8c \uad6c\ud574\uc694'}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:31:31 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29998',
+ 'name': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8',
+ 'num': u'29998',
+ 'title': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8\ud64d\ubcf4'}
+2016-07-19 00:31:31 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:31:31 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30526,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 31, 31, 51892),
+ 'item_scraped_count': 8,
+ 'log_count/DEBUG': 13,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 31, 30, 556503)}
+2016-07-19 00:31:31 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:32:08 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:32:08 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:32:08 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:32:08 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:32:08 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:32:08 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:32:08 [scrapy] INFO: Spider opened
+2016-07-19 00:32:08 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:32:08 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:32:08 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:32:08 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:32:08 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:32:08 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28561',
+ 'name': u'\ub178\uc720\uc9c4',
+ 'num': u'8022',
+ 'title': u'\uc778\uc2a4\ud0c1\uc2a47s + \ud544\ub98410\uc7a5 (\uc0c8\uc0c1\ud488) 4\ub9cc5\ucc9c\uc6d0\uc5d0 \ud310\ub9e4\ud569\ub2c8\ub2e4 '}
+2016-07-19 00:32:08 [scrapy] ERROR: Spider error processing <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+Traceback (most recent call last):
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/haerakai/uou_alarmi/uou_alarmi/spiders/uou_spider.py", line 79, in parse_barter
+    self.cursor.execute('update uou_alarmi_last set barter = %d' % response.xpath('//tbody/tr[1]/td[1]/span/text()').extract()[0])
+TypeError: %d format: a number is required, not unicode
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/35',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20636',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38\uc5d0\uc11c 7\ubd84, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac5\ubd84',
+ 'num': u'10290',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac \uc778\uadfc \uc6d0\ub8f8 \uae09\ud558\uac8c \ub0b4\ub193\uc2b5\ub2c8\ub2e4 \u3160\u3160'}
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200\ub9cc\uc6d0 22',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20635',
+ 'location': u'\ud6c4\ubb38 \uacbd\ube44\uc2e4\uc55e',
+ 'num': u'10289',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc785\uad6c \uc6d0\ub8f8'}
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'500/43',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20634',
+ 'location': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38',
+ 'num': u'10288',
+ 'title': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38 5\ubd84\uac70\ub9ac \uc6d0\ub8f8 \ub4e4\uc5b4\uc624\uc2e4\ubd84 \u3160\u3160 \uae09\ud558\uac8c \uad6c\ud574\uc694'}
+2016-07-19 00:32:08 [scrapy] ERROR: Spider error processing <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+Traceback (most recent call last):
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/haerakai/uou_alarmi/uou_alarmi/spiders/uou_spider.py", line 62, in parse_room
+    self.cursor.execute('update uou_alarmi_last set room = %d' % response.xpath('//tbody/tr[1]/td[1]/span/text()').extract()[0])
+TypeError: %d format: a number is required, not unicode
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:32:08 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29998',
+ 'name': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8',
+ 'num': u'29998',
+ 'title': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8\ud64d\ubcf4'}
+2016-07-19 00:32:08 [scrapy] ERROR: Spider error processing <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+Traceback (most recent call last):
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/haerakai/.virtualenvs/alarmi/local/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/home/haerakai/uou_alarmi/uou_alarmi/spiders/uou_spider.py", line 44, in parse_arbeit
+    self.cursor.execute('update uou_alarmi_last set arbeit = %d' % response.xpath('//tbody/tr[1]/td[3]/span[1]/a/@href').extract()[0][-5:])
+TypeError: %d format: a number is required, not unicode
+2016-07-19 00:32:08 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:32:08 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30526,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 32, 8, 776770),
+ 'item_scraped_count': 8,
+ 'log_count/DEBUG': 13,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'spider_exceptions/TypeError': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 32, 8, 221754)}
+2016-07-19 00:32:08 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:33:37 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:33:37 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:33:37 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:33:37 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:33:37 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:33:37 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:33:37 [scrapy] INFO: Spider opened
+2016-07-19 00:33:37 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:33:37 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:33:37 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:33:37 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:33:37 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:33:37 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:33:37 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:33:37 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28561',
+ 'name': u'\ub178\uc720\uc9c4',
+ 'num': u'8022',
+ 'title': u'\uc778\uc2a4\ud0c1\uc2a47s + \ud544\ub98410\uc7a5 (\uc0c8\uc0c1\ud488) 4\ub9cc5\ucc9c\uc6d0\uc5d0 \ud310\ub9e4\ud569\ub2c8\ub2e4 '}
+2016-07-19 00:33:37 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:33:37 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'300/35',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20636',
+ 'location': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38\uc5d0\uc11c 7\ubd84, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac5\ubd84',
+ 'num': u'10290',
+ 'title': u'\uc6b8\uc0b0\ub300\ud559\uad50 \ud6c4\ubb38, \uc2e0\ubcf5\ub85c\ud0c0\ub9ac \uc778\uadfc \uc6d0\ub8f8 \uae09\ud558\uac8c \ub0b4\ub193\uc2b5\ub2c8\ub2e4 \u3160\u3160'}
+2016-07-19 00:33:38 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'200\ub9cc\uc6d0 22',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20635',
+ 'location': u'\ud6c4\ubb38 \uacbd\ube44\uc2e4\uc55e',
+ 'num': u'10289',
+ 'title': u'\uc6b8\uc0b0\ub300 \ud6c4\ubb38 \uc785\uad6c \uc6d0\ub8f8'}
+2016-07-19 00:33:38 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'500/43',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20634',
+ 'location': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38',
+ 'num': u'10288',
+ 'title': u'\uc6b8\uc0b0\uacfc\ud559\ub300 \ud6c4\ubb38 5\ubd84\uac70\ub9ac \uc6d0\ub8f8 \ub4e4\uc5b4\uc624\uc2e4\ubd84 \u3160\u3160 \uae09\ud558\uac8c \uad6c\ud574\uc694'}
+2016-07-19 00:33:38 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:33:38 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29998',
+ 'name': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8',
+ 'num': u'29998',
+ 'title': u'\ubdf0\ub378\ub2e4\uc774\uc5b4\ud2b8\ud64d\ubcf4'}
+2016-07-19 00:33:38 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:33:38 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30526,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 33, 38, 29743),
+ 'item_scraped_count': 8,
+ 'log_count/DEBUG': 13,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 33, 37, 461113)}
+2016-07-19 00:33:38 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:54:57 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:54:57 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:54:57 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:54:58 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:54:58 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:54:58 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:54:58 [scrapy] INFO: Spider opened
+2016-07-19 00:54:58 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:54:58 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:54:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:54:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:54:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:54:58 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:54:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:54:58 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:54:58 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:54:58 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30528,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 54, 58, 681973),
+ 'item_scraped_count': 2,
+ 'log_count/DEBUG': 7,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 54, 58, 57804)}
+2016-07-19 00:54:58 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:58:22 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:58:22 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:58:22 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:58:22 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:58:22 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:58:22 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:58:22 [scrapy] INFO: Spider opened
+2016-07-19 00:58:22 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:58:22 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:58:22 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:58:22 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:58:22 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:58:22 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:58:22 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 00:58:22 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 00:58:22 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 00:58:22 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:58:22 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30534,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 58, 22, 637357),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 58, 22, 128599)}
+2016-07-19 00:58:22 [scrapy] INFO: Spider closed (finished)
+2016-07-19 00:59:46 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 00:59:46 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 00:59:46 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 00:59:46 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 00:59:46 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 00:59:46 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 00:59:46 [scrapy] INFO: Spider opened
+2016-07-19 00:59:46 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 00:59:46 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 00:59:46 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 00:59:47 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 00:59:47 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 00:59:47 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 00:59:47 [scrapy] INFO: Closing spider (finished)
+2016-07-19 00:59:47 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30536,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 15, 59, 47, 857954),
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 15, 59, 46, 919832)}
+2016-07-19 00:59:47 [scrapy] INFO: Spider closed (finished)
+2016-07-19 01:00:12 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 01:00:12 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 01:00:12 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 01:00:12 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 01:00:12 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 01:00:12 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 01:00:12 [scrapy] INFO: Spider opened
+2016-07-19 01:00:12 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 01:00:12 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 01:00:12 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 01:00:12 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 01:00:12 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 01:00:12 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 01:00:12 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 01:00:13 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 01:00:13 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 01:00:13 [scrapy] INFO: Closing spider (finished)
+2016-07-19 01:00:13 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30536,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 16, 0, 13, 161141),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 16, 0, 12, 276718)}
+2016-07-19 01:00:13 [scrapy] INFO: Spider closed (finished)
+2016-07-19 01:00:23 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 01:00:23 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 01:00:23 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 01:00:23 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 01:00:23 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 01:00:23 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 01:00:23 [scrapy] INFO: Spider opened
+2016-07-19 01:00:23 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 01:00:23 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 01:00:23 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 01:00:24 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 01:00:24 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 01:00:24 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 01:00:24 [scrapy] INFO: Closing spider (finished)
+2016-07-19 01:00:24 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30536,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 16, 0, 24, 209375),
+ 'log_count/DEBUG': 5,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 16, 0, 23, 731232)}
+2016-07-19 01:00:24 [scrapy] INFO: Spider closed (finished)
+2016-07-19 01:00:57 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 01:00:57 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 01:00:57 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 01:00:57 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 01:00:57 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 01:00:57 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 01:00:57 [scrapy] INFO: Spider opened
+2016-07-19 01:00:57 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 01:00:57 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 01:00:57 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 01:00:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 01:00:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 01:00:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 01:00:58 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 01:00:58 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 01:00:58 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 01:00:58 [scrapy] INFO: Closing spider (finished)
+2016-07-19 01:00:58 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30536,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 16, 0, 58, 189181),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 16, 0, 57, 692784)}
+2016-07-19 01:00:58 [scrapy] INFO: Spider closed (finished)
+2016-07-19 01:01:18 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 01:01:18 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 01:01:18 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 01:01:18 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 01:01:18 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 01:01:18 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 01:01:18 [scrapy] INFO: Spider opened
+2016-07-19 01:01:18 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 01:01:18 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 01:01:18 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 01:01:18 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 01:01:18 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 01:01:18 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 01:01:19 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 01:01:19 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 01:01:19 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 01:01:19 [scrapy] INFO: Closing spider (finished)
+2016-07-19 01:01:19 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30536,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 16, 1, 19, 102098),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 16, 1, 18, 558164)}
+2016-07-19 01:01:19 [scrapy] INFO: Spider closed (finished)
+2016-07-19 01:04:57 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 01:04:57 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 01:04:57 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 01:04:57 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 01:04:57 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 01:04:57 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 01:04:57 [scrapy] INFO: Spider opened
+2016-07-19 01:04:57 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 01:04:57 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 01:04:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 01:04:58 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 01:04:58 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 01:04:59 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 01:04:59 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 01:04:59 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 01:04:59 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 01:04:59 [scrapy] INFO: Closing spider (finished)
+2016-07-19 01:04:59 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30536,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 16, 4, 59, 175923),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 16, 4, 57, 936510)}
+2016-07-19 01:04:59 [scrapy] INFO: Spider closed (finished)
+2016-07-19 01:07:28 [scrapy] INFO: Scrapy 1.1.0 started (bot: uou_alarmi)
+2016-07-19 01:07:28 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'uou_alarmi.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['uou_alarmi.spiders'], 'LOG_FILE': 'logfile.log', 'BOT_NAME': 'uou_alarmi'}
+2016-07-19 01:07:28 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2016-07-19 01:07:28 [scrapy] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2016-07-19 01:07:28 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2016-07-19 01:07:29 [scrapy] INFO: Enabled item pipelines:
+['uou_alarmi.pipelines.UouAlarmiPipeline']
+2016-07-19 01:07:29 [scrapy] INFO: Spider opened
+2016-07-19 01:07:29 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2016-07-19 01:07:29 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2016-07-19 01:07:29 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/robots.txt> (referer: None)
+2016-07-19 01:07:29 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L> (referer: None)
+2016-07-19 01:07:29 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L> (referer: None)
+2016-07-19 01:07:29 [scrapy] DEBUG: Crawled (200) <GET http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L> (referer: None)
+2016-07-19 01:07:29 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L>
+{'category': 'barter',
+ 'date': u'2016.07.18',
+ 'link': u'barter.aspx?o=R&a_no=28562',
+ 'name': u'\uae40\ub2e4\uc740',
+ 'num': u'8023',
+ 'title': u'\uc2a4\ud53c\ub2dd 3\uac1c\uc6d4 \uc774\uc6a9\uad8c\ud31d\ub2c8\ub2e4!!'}
+2016-07-19 01:07:29 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L>
+{'category': 'room',
+ 'cost': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'date': u'2016.07.18',
+ 'link': u'room.aspx?o=R&a_no=20637',
+ 'location': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154',
+ 'num': u'10291',
+ 'title': u'\uc6b8\ub300 1\ubd84 \uac70\ub9ac \uc6d0\ub8f8\ud154'}
+2016-07-19 01:07:29 [scrapy] DEBUG: Scraped from <200 http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L>
+{'category': 'arbeit',
+ 'date': u'16.07.18',
+ 'link': u'arbeit.aspx?o=R&a_no=29999',
+ 'name': u'\uacfc\uc77c\uac00\uac8c',
+ 'num': u'29999',
+ 'title': u'\uc218\uc554\uc2dc\uc7a5 \uccad\uacfc\uac00\uac8c'}
+2016-07-19 01:07:29 [scrapy] INFO: Closing spider (finished)
+2016-07-19 01:07:29 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 960,
+ 'downloader/request_count': 4,
+ 'downloader/request_method_count/GET': 4,
+ 'downloader/response_bytes': 30531,
+ 'downloader/response_count': 4,
+ 'downloader/response_status_count/200': 4,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2016, 7, 18, 16, 7, 29, 501617),
+ 'item_scraped_count': 3,
+ 'log_count/DEBUG': 8,
+ 'log_count/INFO': 7,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 3,
+ 'scheduler/dequeued/memory': 3,
+ 'scheduler/enqueued': 3,
+ 'scheduler/enqueued/memory': 3,
+ 'start_time': datetime.datetime(2016, 7, 18, 16, 7, 29, 15746)}
+2016-07-19 01:07:29 [scrapy] INFO: Spider closed (finished)

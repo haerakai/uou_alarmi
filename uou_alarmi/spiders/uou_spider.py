@@ -13,7 +13,7 @@ class UouSpider(scrapy.Spider):
 
 	def start_requests(self):
 		try:
-			self.conn = MySQLdb.connect(user='alarmi', passwd='alarmi', db='uou_alarmi', host='localhost', charset='utf8', use_unicode='True')
+			self.conn = MySQLdb.connect(user='user', passwd='passwd', db='uou_alarmi', host='localhost', charset='utf8', use_unicode='True')
 			self.cursor = self.conn.cursor()
 
 			self.cursor.execute('select arbeit, room, barter from uou_alarmi_last')
@@ -25,10 +25,11 @@ class UouSpider(scrapy.Spider):
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/arbeit/arbeit.aspx?o=L", self.parse_arbeit)
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/room/room.aspx?o=L", self.parse_room)
 		yield scrapy.Request("http://www.ulsan.ac.kr/utopia/info/barter/barter.aspx?o=L", self.parse_barter)
-	
-	def parse_arbeit(self, response):
-		item = UouAlarmiItemArbeit()		
 
+	def parse_arbeit(self, response):
+		item = UouAlarmiItemArbeit()
+		flag = 0
+		
 		for sel in response.xpath('//tbody/tr'):
 			item['category'] = 'arbeit'
 			item['date'] = sel.xpath('td[1]/span/text()').extract()[0]
@@ -39,7 +40,9 @@ class UouSpider(scrapy.Spider):
 			if self.result[0] >= int(item['num']):
 				break
 
-			yield item	
+			yield item
+		self.cursor.execute('update uou_alarmi_last set arbeit = %s' % response.xpath('//tbody/tr[1]/td[3]/span[1]/a/@href').extract()[0][-5:])
+		self.conn.commit()
 
 	def parse_room(self, response):
 		item = UouAlarmiItemRoom()
@@ -56,6 +59,8 @@ class UouSpider(scrapy.Spider):
 				break
 			
 			yield item
+		self.cursor.execute('update uou_alarmi_last set room = %s' % response.xpath('//tbody/tr[1]/td[1]/span/text()').extract()[0])
+		self.conn.commit()
 
 	def parse_barter(self, response):
 		item = UouAlarmiItemBarter()
@@ -71,4 +76,6 @@ class UouSpider(scrapy.Spider):
 				break
 				
 			yield item
+		self.cursor.execute('update uou_alarmi_last set barter = %s' % response.xpath('//tbody/tr[1]/td[1]/span/text()').extract()[0])
+		self.conn.commit()
 
